@@ -1,13 +1,10 @@
 import './App.css';
-import CardBackView from './components/CardBackView/CardBackView';
-// import CardFrontView from './components/CardFrontView/CardFrontView'
+import Home from './components/Home/Home';
 
 function App() 
 {
   return (
-
-    // <CardFrontView />
-    <CardBackView />
+    <Home />
     )
 }
 

@@ -1,17 +1,14 @@
 .CardBackView {
     background: url('../../images/bg-card-back.png');
     background-repeat: no-repeat;
-    height: 250px;
-    width: 450px;
+    background-size: 17rem;
+    height: 158px;
 }
 
 .cvc-number {
-    position: absolute;
+    padding-top: 4.1rem;
+    padding-left: 13.2rem;
     color: white;
     letter-spacing: 2px;
-    top: 17%;
-    bottom: 0;
-    left: 56%;
-    right: 0;
-    font-size: 1rem;
+    font-size: 0.7rem;
 }

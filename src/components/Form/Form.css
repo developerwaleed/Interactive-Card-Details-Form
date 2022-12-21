@@ -1,0 +1,54 @@
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin: 50px;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+}
+
+label {
+    color: hsl(278, 68%, 11%);
+}
+
+label div{
+    padding-bottom: 8px;
+}
+
+.input-fields {
+    height: 5vh;
+    width: 80vw;
+    border-radius: 5px;
+    border: 1px solid hsl(270, 3%, 87%);
+}
+
+.month-field {
+    width: 20vw;
+    margin-right: 10px;
+}
+
+.year-field {
+    width: 20vw;
+    margin-right: 10px;
+}
+
+.CVC-field {
+    width: 35vw;
+}
+
+.date-cvc-label {
+    width: 100vw;
+}
+
+.date-cvc-name span{
+    padding-left: 40px;
+}
+
+::placeholder {
+    color: hsl(279, 6%, 55%);
+    font-family: 'Space Grotesk', sans-serif;
+    padding: 10px;
+    font-size: 1rem;
+    font-weight: 500;
+    opacity: 50%;
+}

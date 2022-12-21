@@ -1,0 +1,29 @@
+@import url('https://fonts.google.com/specimen/Space+Grotesk');
+
+:root {   
+    /* Primary */
+    
+
+    --Linear-gradient : hsl(249, 99%, 64%) to hsl(278, 94%, 30%); /*for active input border */
+    --Red : hsl(0, 100%, 66%); /* for input errors */
+    
+    /* Neutral */
+    
+    --White: hsl(0, 0%, 100%);
+    --Light-grayish-violet: hsl(270, 3%, 87%);
+    --Dark-grayish-violet: hsl(279, 6%, 55%);
+    --Very-dark-violet: hsl(278, 68%, 11%);
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    Font-size: 18px;
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 500;
+}

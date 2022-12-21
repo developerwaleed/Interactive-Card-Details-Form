@@ -1,0 +1,29 @@
+/* @import url('../../images/bg-card-front.png'); */
+
+
+.card-front-view {
+    background: url('../../images/bg-card-front.png');
+    background-repeat: no-repeat;
+    height: 250px;
+    width: 450px;
+}
+ 
+.big-circle {
+    position: absolute;
+    top:25px;
+    left:25px;
+    background: white;
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+}
+
+.hollow-circle {
+    position: absolute;
+    top:40px;
+    left:80px;
+    border: 1px solid white;
+    height: 17px;
+    width: 17px;
+    border-radius: 50%;
+}

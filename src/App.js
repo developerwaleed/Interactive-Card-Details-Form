@@ -1,11 +1,12 @@
 import './App.css';
+import CardFrontView from './components/CardFrontView/CardFrontView'
 
-function App() {
+function App() 
+{
   return (
-    <div className="App">
-      
-    </div>
-  );
+
+    <CardFrontView />
+    )
 }
 
 export default App;

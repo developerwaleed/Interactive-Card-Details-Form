@@ -1,17 +1,21 @@
-/* @import url('../../images/bg-card-front.png'); */
-
-
 .card-front-view {
+    display: flex;
+    flex-direction: column;
+    gap: 65px;
+    padding: 20px;
     background: url('../../images/bg-card-front.png');
     background-repeat: no-repeat;
     height: 250px;
     width: 450px;
 }
+
+.circles {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
  
 .big-circle {
-    position: absolute;
-    top:25px;
-    left:25px;
     background: white;
     height: 45px;
     width: 45px;
@@ -19,11 +23,30 @@
 }
 
 .hollow-circle {
-    position: absolute;
-    top:40px;
-    left:80px;
     border: 1px solid white;
     height: 17px;
     width: 17px;
     border-radius: 50%;
+}
+
+.card-information {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.card-number {
+    color:white;
+    font-size: 1.8rem;
+    font-weight: 400;
+    letter-spacing: 3px;
+}
+
+.card-details {
+    display: flex;
+    gap: 12.5rem;
+    color:white;
+    font-size: 1rem;
+    font-weight: 400;
+    letter-spacing: 2px;
 }

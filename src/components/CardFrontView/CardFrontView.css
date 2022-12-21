@@ -1,0 +1,52 @@
+.card-front-view {
+    display: flex;
+    flex-direction: column;
+    gap: 65px;
+    padding: 20px;
+    background: url('../../images/bg-card-front.png');
+    background-repeat: no-repeat;
+    height: 250px;
+    width: 450px;
+}
+
+.circles {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+ 
+.big-circle {
+    background: white;
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+}
+
+.hollow-circle {
+    border: 1px solid white;
+    height: 17px;
+    width: 17px;
+    border-radius: 50%;
+}
+
+.card-information {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.card-number {
+    color:white;
+    font-size: 1.8rem;
+    font-weight: 400;
+    letter-spacing: 3px;
+}
+
+.card-details {
+    display: flex;
+    gap: 12.5rem;
+    color:white;
+    font-size: 0.9rem;
+    font-weight: 400;
+    letter-spacing: 2px;
+}

@@ -1,11 +1,13 @@
 import './App.css';
-import CardFrontView from './components/CardFrontView/CardFrontView'
+import CardBackView from './components/CardBackView/CardBackView';
+// import CardFrontView from './components/CardFrontView/CardFrontView'
 
 function App() 
 {
   return (
 
-    <CardFrontView />
+    // <CardFrontView />
+    <CardBackView />
     )
 }
 

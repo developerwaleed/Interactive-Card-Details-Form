@@ -18,6 +18,9 @@ function Form() {
             <input type="number" placeholder='YY' name="name" className='input-fields year-field'/>
             <input type="number" placeholder='e.g. 123' name="name" className='input-fields CVC-field'/>
         </label>
+        <button className='btn-primary'>
+          Confirm
+        </button>
     </form>
   )
 }

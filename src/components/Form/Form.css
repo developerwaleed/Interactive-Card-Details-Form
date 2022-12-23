@@ -65,6 +65,20 @@ label div{
     width: 100%;
 }
 
+input {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 500;
+    padding: 10px;
+}
+
+input:focus {
+    outline: none !important;
+    font-family: 'Space Grotesk', sans-serif;
+    padding: 10px;
+    font-weight: 500;
+    border:1.5px solid hsl(278, 94%, 30%);
+  }
+
 @media only screen and (min-width: 1300px) and (max-width: 1550px){
     .formdiv {
         margin-left: 30rem;

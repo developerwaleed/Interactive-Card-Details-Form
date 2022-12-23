@@ -1,11 +1,11 @@
     import React from 'react'
     import './CardBackView.css'
 
-    function CardBackView() {
+    function CardBackView(props) {
     return (
         <div className='CardBackView'>
             <div className='cvc-number'>
-                123
+                {props.data.cvc}
             </div>
         </div>
     )

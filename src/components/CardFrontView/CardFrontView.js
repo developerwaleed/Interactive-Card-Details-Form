@@ -11,14 +11,14 @@ export default function CardFrontView(props) {
 
     <div className='card-information'>
     <div className='card-number'>
-    {props.number}
+    {props.data.cardNumber}
     </div>
     <div className='card-details'>
         <div>
-        {props.name}
+        {props.data.name}
         </div>
         <div>
-           {props.expiry}
+           {props.data.month}/{props.data.year}
         </div>
     </div>
     </div>

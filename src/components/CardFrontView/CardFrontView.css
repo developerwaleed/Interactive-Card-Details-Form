@@ -1,14 +1,3 @@
-/* .card-front-view {
-    display: flex;
-    flex-direction: column;
-    gap: 37px;
-    padding: 20px;
-    background: url('../../images/bg-card-front.png');
-    background-repeat: no-repeat;
-    background-size: 20rem;
-    height: 250px;
-    width: 450px;
-} */
 .card-front-view {
     display: flex;
     flex-direction: column;
@@ -61,3 +50,42 @@
     font-weight: 400;
     letter-spacing: 2px;
 }
+
+@media only screen and (min-width: 1300px) {
+    .card-front-view {
+    padding: 30px;
+    gap: 65px;
+    background-size: contain;
+    height: 250px;
+    width: 450px;
+    }
+
+    .circles {
+        gap: 15px;
+    }
+     
+    .big-circle {
+        height: 45px;
+        width: 45px;
+    }
+    
+    .hollow-circle {
+        height: 18px;
+        width: 18px;
+    }
+    
+    .card-information {
+        gap: 20px;
+    }
+    
+    .card-number {
+        font-size: 2rem;
+    }
+    
+    .card-details {
+        gap: 13.5rem;
+        font-size: 0.9rem;
+    }
+    
+
+ }

@@ -5,6 +5,7 @@ form {
     margin: 70px 20px 0 20px;
     font-size: 0.85rem;
     letter-spacing: 1px;
+    width: 372px;
 }
 
 label {
@@ -17,23 +18,23 @@ label div{
 
 .input-fields {
     height: 5vh;
-    width: 90vw;
+    width: 372px;
     border-radius: 5px;
     border: 1px solid hsl(270, 3%, 87%);
 }
 
 .month-field {
-    width: 20vw;
+    width: 83px;
     margin-right: 10px;
 }
 
 .year-field {
-    width: 20vw;
+    width: 83px;
     margin-right: 10px;
 }
 
 .CVC-field {
-    width: 45vw;
+    width: 186px;
 }
 
 .date-cvc-label {
@@ -62,4 +63,29 @@ label div{
     border-radius: 5px;
     font-size: 0.9rem;
     width: 100%;
+}
+
+@media only screen and (min-width: 1300px) and (max-width: 1550px){
+    .formdiv {
+        margin-left: 30rem;
+    }
+}
+
+
+@media only screen and (min-width: 820px) and (max-width: 1300px) {
+
+    form {
+        display: flex;
+        justify-content: center;
+        margin: 0;
+        margin-top: 15rem;
+    }
+}
+@media only screen and (min-width: 1300px) {
+    form {
+        display: flex;
+        justify-content: center;
+        margin: 0;
+    }
+
 }

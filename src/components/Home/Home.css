@@ -18,8 +18,67 @@
     margin-top: 70px;
 }
 
+@media only screen and (min-width: 820px) and (max-width: 1300px) {
+    .home {
+        display: flex;
+        justify-content: space-around;
+        background: url('../../images/bg-main-desktop.png');
+        background-repeat: no-repeat;
+        background-size: 23rem 74rem;
+        flex: 1;
+        height: 100vh;
+    }
+
+    .formdiv {
+        margin-left: 20rem;
+    }
+
+    .CardBackview-home-div {
+        position: absolute;
+        width: 600px;
+        top: 19rem;
+        left: 6rem;
+    } 
+    
+    .CardFrontview-home-div {
+        position: absolute;
+        top: 10rem;
+        left: 7rem;
+    }
+}
+
 @media only screen and (max-width: 360px) {
     .CardBackview-home-div {
         padding: 2.17rem 0 0 5rem;
     }
-  }
+}
+
+@media only screen and (min-width: 1300px) {
+    .home {
+        display: flex;
+        background: url('../../images/bg-main-desktop.png');
+        background-repeat: no-repeat;
+        justify-content: space-around;
+        flex: 1;
+        background-size: contain;
+        height: 100vh;
+    }
+
+    .formdiv {
+        /* margin-left: 60rem; */
+        margin: 0;
+    }
+
+    .CardBackview-home-div {
+        position: absolute;
+        width: 600px;
+        top: 25rem;
+        left: 13rem;
+    } 
+    
+    .CardFrontview-home-div {
+        position: absolute;
+        top: 10rem;
+        left: 13rem;
+    }
+}

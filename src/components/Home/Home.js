@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useEffect, useRef} from 'react'
 import './Home.css';
 import CardFrontView from '../CardFrontView/CardFrontView'
 import CardBackView from '../CardBackView/CardBackView'
@@ -11,7 +11,7 @@ function Home() {
           <CardBackView />
         </div>
         <div className='CardFrontview-home-div'>
-        <CardFrontView />
+        <CardFrontView name="Waleed Amjad" expiry="03/26" number="1234 5678 4512 4578"/>
         </div>
         <div className='formdiv'></div>
         <Form />

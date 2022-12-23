@@ -12,3 +12,20 @@
     letter-spacing: 2px;
     font-size: 0.7rem;
 }
+
+@media only screen and (min-width: 1300px) { 
+    .CardBackView {
+        background: url('../../images/bg-card-back.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+        height: 250px;
+        width: 450px;
+    }
+    
+    .cvc-number {
+        padding-top: 7rem;
+        padding-left: 22.5rem;
+        color: white;
+        font-size: 1rem;
+    }
+}

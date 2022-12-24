@@ -5,7 +5,7 @@ import CardBackView from '../CardBackView/CardBackView'
 import Form from '../Form/Form'
 
 function Home() {
-  let [data, setData] = useState({name:'Test', cardNumber:'0000 0000 0000 0000', month:'02', year:'25', cvc:'564'});
+  let [data, setData] = useState({name:'Jane Appleaseed', cardNumber:'0000 0000 0000 0000', month:'02', year:'25', cvc:'564'});
   
   return (
     <div className='home'>

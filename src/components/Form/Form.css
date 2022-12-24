@@ -63,7 +63,37 @@ label div{
     border-radius: 5px;
     font-size: 0.9rem;
     width: 100%;
+    margin-top: 25px;
 }
+
+input {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 500;
+    padding: 10px;
+}
+
+input:focus {
+    outline: none !important;
+    font-family: 'Space Grotesk', sans-serif;
+    padding: 10px;
+    font-weight: 500;
+    border:1.5px solid hsl(278, 94%, 30%);
+  }
+
+  .errorDiv {
+    color: hsl(0, 100%, 66%);
+    font-size: 10px;
+    padding-top: 10px;
+}
+
+.SpecialerrorDiv {
+    position: absolute;
+    padding-top: 10px;
+  }
+
+  #cvcError{
+    padding-left: 200px;
+  }
 
 @media only screen and (min-width: 1300px) and (max-width: 1550px){
     .formdiv {

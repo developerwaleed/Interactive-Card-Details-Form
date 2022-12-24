@@ -3,6 +3,7 @@ import './Home.css';
 import CardFrontView from '../CardFrontView/CardFrontView'
 import CardBackView from '../CardBackView/CardBackView'
 import Form from '../Form/Form'
+import CompleteState from '../CompleteState/CompleteState';
 
 function Home() {
   let [data, setData] = useState({name:'Jane Appleaseed', cardNumber:'0000 0000 0000 0000', month:'02', year:'25', cvc:'564'});
@@ -16,7 +17,8 @@ function Home() {
         <CardFrontView data={data}/>
         </div>
         <div className='formdiv'></div>
-        <Form HandlesetData={setData} data={data}/>
+        {/* <Form HandlesetData={setData} data={data}/> */}
+        <CompleteState />
     </div>
   )
 }

@@ -1,8 +1,10 @@
-import React from 'react'
+import React, {useState} from 'react'
 import { useNavigate } from 'react-router-dom';
 import './Form.css'
 
 function Form(props) {
+
+  let [errorMessages, setErrorMessages] = useState({});
 
   const navigate = useNavigate();
 
@@ -27,82 +29,67 @@ function Form(props) {
   }
 
   const handleSubmit = (e) => {
+    let isError = false;
     e.preventDefault();
-    const form = document.getElementById('credit-card-form');
-    if ((form.elements['CardHolderName'].value.length === 0) || (form.elements['cardNumber'].value.length === 0) || !(/^[0-9\s]+$/.test(form.elements['cardNumber'].value)) || (form.elements['month'].value.length === 0) || (form.elements['year'].value.length === 0) || (form.elements['cvc'].value.length === 0) )
-    {
+    const form = e.target;
     if (form.elements['CardHolderName'].value.length === 0) {
-      const NameErrorField = document.getElementById('NameError');
-      NameErrorField.innerHTML = "Can't be Blank";
+        isError= true;
+        setErrorMessages(errorMessages=> ({ ...errorMessages, name:'Cant be Blank' }));
+      }
+      if (form.elements['cardNumber'].value.length === 0) {
+        isError= true;
+        setErrorMessages(errorMessages=> ({ ...errorMessages, cardNumber:'Cant be Blank' }));
+      }
+      if (!(/^[0-9\s]+$/.test(form.elements['cardNumber'].value)) && form.elements['cardNumber'].value.length !== 0) {
+        isError= true;
+        setErrorMessages(errorMessages=> ({ ...errorMessages, cardNumber:"Field can only contain numbers"}));
+      }
+      if (form.elements['month'].value.length === 0) {
+        isError= true;
+        setErrorMessages(errorMessages=> ({ ...errorMessages, expiryError:"Can't be Blank"}));
+      }
+      if (form.elements['year'].value.length === 0) {
+        isError= true;
+        setErrorMessages(errorMessages=> ({ ...errorMessages, expiryError:"Can't be Blank"}));
+      }
+      if (form.elements['cvc'].value.length === 0) {
+        isError= true;
+        setErrorMessages(errorMessages=> ({ ...errorMessages, cvcErrors:"Can't be Blank"}));
+        console.table("errors:",errorMessages)
+      }
       setTimeout(() => {
-        NameErrorField.innerHTML = "";
+        setErrorMessages({});
       }, 3000);
-    }
-    if (form.elements['cardNumber'].value.length === 0) {
-      const cardNumberError = document.getElementById('CardNumberError');
-      cardNumberError.innerHTML = "Can't be Blank";
-      setTimeout(() => {
-        cardNumberError.innerHTML = "";
-      }, 3000);
-    }
-    if (!(/^[0-9\s]+$/.test(form.elements['cardNumber'].value))) {
-      const CardNumberError = document.getElementById('CardNumberError');
-      CardNumberError.innerHTML = "Field Can only contains Number";
-      setTimeout(() => {
-        CardNumberError.innerHTML = "";
-      }, 3000);
-    }
-    if (form.elements['month'].value.length === 0) {
-      const ExpiryError = document.getElementById('ExpiryError');
-      ExpiryError.innerHTML = "Can't be Blank";
-      setTimeout(() => {
-        ExpiryError.innerHTML = "";
-      }, 3000);
-    }
-    if (form.elements['year'].value.length === 0) {
-      const ExpiryError = document.getElementById('ExpiryError');
-      ExpiryError.innerHTML = "Can't be Blank";
-      setTimeout(() => {
-        ExpiryError.innerHTML = "";
-      }, 3000);
-    }
-    if (form.elements['cvc'].value.length === 0) {
-      const cvcError = document.getElementById('cvcError');
-      cvcError.innerHTML = "Can't be Blank";
-      setTimeout(() => {
-        cvcError.innerHTML = "";
-      }, 3000);
-    }
-  }
-  else 
-  {
-    navigate('/data-submit-success');
-  }
+      if(!isError)
+      {
+          navigate('/data-submit-success');
+
+      }
   }
 
   return (
-    <form id='credit-card-form'>
+    <form id='credit-card-form' onSubmit={handleSubmit}>
       <label>
         <div>CARDHOLDER NAME</div>
         <input type="text" name="CardHolderName" maxLength="25" placeholder="e.g. Jane Appleaseed" onChange={(ev) => props.HandlesetData({ ...props.data, name: ev.target.value })} className='input-fields' />
-        <div id="NameError" className='errorDiv'></div>
+        <div id="NameError" className='errorDiv'>{errorMessages.name}</div>
       </label>
       <label>
         <div>CARD NUMBER</div>
         <input type="text" name="cardNumber" maxLength="19" placeholder="e.g 1234 5678 9123 0000" onChange={handleData} className='input-fields' />
-        <div id="CardNumberError" className='errorDiv'></div>
+        <div id="CardNumberError" className='errorDiv'>{errorMessages.cardNumber}</div>
       </label>
       <label className='date-cvc-label'>
         <div className='date-cvc-name'>EXP. DATE(MM/YY) <span>CVC</span></div>
+        <div id="ExpiryError" className='errorDiv SpecialerrorDiv'>{errorMessages.expiryError}</div>
+        <div className='expiry-cvc-fileds'>
         <input type="number" placeholder='MM' name="month" onChange={handleData} className='input-fields month-field' />
-        <div id="ExpiryError" className='errorDiv SpecialerrorDiv'></div>
         <input type="number" placeholder='YY' name="year" maxLength="2" onChange={handleData} className='input-fields year-field' />
         <input type="number" placeholder='e.g. 123' name="cvc" maxLength="3" onChange={handleData} className='input-fields CVC-field' />
-        <div id="cvcError" className='errorDiv SpecialerrorDiv'></div>
+        </div>
+        <div id="cvcError" className='errorDiv SpecialerrorDiv'>{errorMessages.cvcErrors}</div>
       </label>
-      <button onClick={handleSubmit} className='btn-primary'>
-        Confirm
-      </button>
+      <input type="submit" className='btn-primary' value="Confirm" />
     </form>
   )
 }

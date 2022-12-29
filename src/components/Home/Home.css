@@ -53,6 +53,27 @@
     }
 }
 
+@media only screen and (min-width: 720px) and (max-width: 820px){
+
+    .home {
+        background-size: 50rem 30rem;
+    }
+
+    .CardBackview-home-div {
+        position: absolute;
+        width: 600px;
+        top: 2.5rem;
+        left: 6rem;
+    } 
+    
+    .CardFrontview-home-div {
+        position: absolute;
+        top: 10rem;
+        left: 7rem;
+    }
+
+}
+
 @media only screen and (min-width: 1300px) {
     .home {
         display: flex;
